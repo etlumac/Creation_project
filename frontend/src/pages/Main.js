@@ -25,7 +25,11 @@ import three from "../Images/team-collaborationexperts-in-collaborationour-team-
 import four from "../Images/cultural-tiesrussian-and-algerian-artists-musicians-and-writers-collaborate-to-create-unique-pro-550254195.png";
 import five from "../Images/economic-partnershiprussia-and-algeria-are-actively-developing-trade-and-economic-cooperation-esp-42285790.png";
 import six from "../Images/education-and-sciencethere-is-an-active-exchange-of-students-researchers-and-educators-between-r-27290424.png";
-
+import Chatbot from 'react-chatbot-kit'
+import 'react-chatbot-kit/build/main.css'
+import ActionProvider from './ChatBot/ActionProvider';
+import config from './ChatBot/config';
+import MessageParser from './ChatBot/MessageParser';
 export const Ap = () => {
   const initialFormData = JSON.parse(localStorage.getItem("formData")) || {
     name: "",
@@ -97,7 +101,14 @@ export const Ap = () => {
             </section>
           </nav>
         </header>
-
+        <div className="scrollable-div">
+            <header className="App-header">
+              <Chatbot
+              config={config}
+              messageParser={MessageParser}
+              actionProvider={ActionProvider} />
+            </header>
+            </div>
         <hr></hr>
 
         <section id="about" class="about-us">

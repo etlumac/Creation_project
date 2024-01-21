@@ -501,6 +501,7 @@ nav a#podval:hover {
   .services-block {
     margin-top: 10px; /* Уменьшаем отступ между блоками в вертикальной компоновке */
     max-width: 100%; /* Ширина блока на всю доступную ширину */
+    z-index: 1;
   }
 }
 .container {
@@ -557,4 +558,46 @@ nav a#podval:hover {
 
 .slider-nav a:hover {
   opacity: 1;
+}
+.scrollable-div{
+  text-align: flex-end;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.App-header{
+  z-index: 3;
+  margin-top: 90vh;
+  margin-bottom:30vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: fixed;
+  top: 20px;
+  padding-bottom: 40%;
+
+  .react-chatbot-kit-chat-bot-message {
+    background-color:gray;
+    color:white;
+  }
+  .react-chatbot-kit-chat-bot-message-arrow {
+    border-right:8px solid gray;
+  }
+  .react-chatbot-kit-chat-btn-send {
+    background-color:gray;
+  }
+  .react-chatbot-kit-chat-container{
+    width: 250px;
+    height: 500px;
+    position: relative
+  }
+}
+.start-answer{
+  background-color:gray;
+  color:white;
+  padding: .5rem 1rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  margin-left: 4rem;
 }
