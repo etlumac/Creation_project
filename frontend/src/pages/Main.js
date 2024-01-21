@@ -27,9 +27,10 @@ import five from "../Images/economic-partnershiprussia-and-algeria-are-actively-
 import six from "../Images/education-and-sciencethere-is-an-active-exchange-of-students-researchers-and-educators-between-r-27290424.png";
 import Chatbot from 'react-chatbot-kit'
 import 'react-chatbot-kit/build/main.css'
-import ActionProvider from './ChatBot/ActionProvider';
-import config from './ChatBot/config';
-import MessageParser from './ChatBot/MessageParser';
+
+import ActionProvider from '../ChatBot/ActionProvider';
+import config from '../ChatBot/config';
+import MessageParser from '../ChatBot/MessageParser';
 export const Ap = () => {
   const initialFormData = JSON.parse(localStorage.getItem("formData")) || {
     name: "",
