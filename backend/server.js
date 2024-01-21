@@ -11,6 +11,12 @@ app.use(bodyParser.json());
 
 const dataFilePath = path.join(__dirname, 'admin.txt');
 
+app.get('/',(req, res) => {
+    res.json({
+        message: "Home route"
+    });
+});
+
 app.get('/api',(req, res) => {
     res.json({
         message: "server works somehow"
@@ -58,5 +64,5 @@ app.use(function (req, res, next) {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`Server is running on port ${PORT}, http://localhost:${PORT}`);
 });
