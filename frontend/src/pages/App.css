@@ -586,18 +586,19 @@ nav a#podval:hover {
   .react-chatbot-kit-chat-btn-send {
     background-color:gray;
   }
-  .react-chatbot-kit-chat-container{
-    width: 250px;
-    height: 500px;
-    position: relative
-  }
+
 }
-.start-answer{
+
+.btn_setting{
   background-color:gray;
   color:white;
-  padding: .5rem 1rem;
   border-radius: 999px;
   border: none;
   cursor: pointer;
-  margin-left: 4rem;
+  padding: .5rem 1rem;
+  margin-left: 0rem;
+}
+
+.second_btn{
+  margin-left: 1rem;
 }

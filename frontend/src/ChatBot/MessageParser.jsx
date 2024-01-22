@@ -3,8 +3,8 @@ import React from 'react';
 
 const MessageParser = ({ children, actions }) => {
   const parse = (message) => {
-    if (message.includes('да')) {
-      actions.handleHello();
+    if (message.includes('')) {
+      actions.handleAskHelp();
     }
   };
 
