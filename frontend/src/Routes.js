@@ -2,12 +2,12 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Navigate,
-} from "react-router-dom";
-import { Ap } from "./pages/Main";
-import { Add } from "./pages/Russia";
-import { Alg } from "./pages/Algeria";
-import { FAQ } from "./pages/FAQ";
+  Navigate
+} from 'react-router-dom'
+import { Ap } from './pages/Main'
+import { Add } from './pages/Russia'
+import { Alg } from './pages/Algeria'
+import { FAQ } from './pages/FAQ'
 export const Routing = () => {
   return (
     <Router>
@@ -19,5 +19,5 @@ export const Routing = () => {
         <Route exact path="/FAQ" element={<FAQ />} />
       </Routes>
     </Router>
-  );
-};
+  )
+}

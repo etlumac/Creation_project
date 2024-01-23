@@ -1,9 +1,9 @@
-import "./App.css";
-import video from "../Images/production_id_3923315.mp4";
+import './App.css'
+import video from '../Images/production_id_3923315.mp4'
 
-import one from "../Images/photo_2024-01-21_10-48-33.jpg";
-import two from "../Images/russia1.jpg";
-import three from "../Images/moscow.jpg";
+import one from '../Images/photo_2024-01-21_10-48-33.jpg'
+import two from '../Images/russia1.jpg'
+import three from '../Images/moscow.jpg'
 
 export const Add = () => {
   return (
@@ -12,7 +12,7 @@ export const Add = () => {
         <header>
           <nav>
             <h1>Созидание</h1>
-            <section class="head_options">
+            <section className="head_options">
               <a href="/home">Home</a>
               <a href="russia">Russia</a>
               <a href="algeria">Algeria</a>
@@ -23,27 +23,27 @@ export const Add = () => {
         <hr></hr>
 
         <section>
-          <div class="video-bg">
+          <div className="video-bg">
             <video
               src={video}
               type="video/mp4"
               controls="controls"
-              autoplay="true"
+              autoPlay="true"
               muted="true"
               loop="true"
             />
-            <div class="effects"></div>
-            <div class="video-bg__content">
+            <div className="effects"></div>
+            <div className="video-bg__content">
               <h1>Russia</h1>
             </div>
           </div>
         </section>
         <hr></hr>
 
-        <section class="info">
+        <section className="info">
           <h2>Information about contry</h2>
-          <section class="services">
-            <div id="our-services-1" class="our-services">
+          <section className="services">
+            <div id="our-services-1" className="our-services">
               <h3>Geography and Culture</h3>
               <p>
                 Russia is the largest country in the world, spanning eight time
@@ -53,7 +53,7 @@ export const Add = () => {
                 Red Square, and a rich literary and artistic heritage.
               </p>
             </div>
-            <div id="our-services-2" class="our-services">
+            <div id="our-services-2" className="our-services">
               <h3>History and Traditions</h3>
               <p>
                 Russia boasts a rich history covering multiple epochs, from
@@ -66,8 +66,8 @@ export const Add = () => {
             </div>
           </section>
 
-          <section class="services">
-            <div id="our-services-1" class="our-services">
+          <section className="services">
+            <div id="our-services-1" className="our-services">
               <h3>Natural Wonders</h3>
               <p>
                 Russia is blessed with breathtaking natural wonders, including
@@ -77,7 +77,7 @@ export const Add = () => {
                 awe-inspiring volcanoes.
               </p>
             </div>
-            <div id="our-services-2" class="our-services">
+            <div id="our-services-2" className="our-services">
               <h3>Innovation and Technology</h3>
               <p>
                 Beyond its rich history, Russia is a hub of innovation and
@@ -94,13 +94,13 @@ export const Add = () => {
         <section>
           <h2>Vizualization</h2>
 
-          <div class="slider-wrapper">
-            <div class="slider">
+          <div className="slider-wrapper">
+            <div className="slider">
               <img id="slide-1" src={one} />
               <img id="slide-2" src={two} />
               <img id="slide-3" src={three} />
             </div>
-            <div class="slider-nav">
+            <div className="slider-nav">
               <a href="#slide-1"></a>
               <a href="#slide-2"></a>
               <a href="#slide-3"></a>
@@ -109,7 +109,7 @@ export const Add = () => {
         </section>
         <hr></hr>
 
-        <section class="useful_sources">
+        <section className="useful_sources">
           <h2>Information</h2>
           <div>
             Explore more about Russia through these useful resources:
@@ -151,7 +151,7 @@ export const Add = () => {
         </footer>
       </body>
     </>
-  );
-};
+  )
+}
 
-export default Add;
+export default Add

@@ -1,9 +1,9 @@
-import "./App.css";
-import video from "../Images/production_id_3711794.mp4";
+import './App.css'
+import video from '../Images/production_id_3711794.mp4'
 
-import one from "../Images/1.jpg";
-import two from "../Images/2.jpg";
-import three from "../Images/3.jpg";
+import one from '../Images/1.jpg'
+import two from '../Images/2.jpg'
+import three from '../Images/3.jpg'
 
 export const Alg = () => {
   return (
@@ -12,7 +12,7 @@ export const Alg = () => {
         <header>
           <nav>
             <h1>Созидание</h1>
-            <section class="head_options">
+            <section className="head_options">
               <a href="/home">Home</a>
               <a href="russia">Russia</a>
 
@@ -24,27 +24,27 @@ export const Alg = () => {
         </header>
         <hr></hr>
         <section>
-          <div class="video-bg">
+          <div className="video-bg">
             <video
               src={video}
               type="video/mp4"
               controls="controls"
-              autoplay="true"
+              autoPlay="true"
               muted="true"
               loop="true"
             />
-            <div class="effects"></div>
-            <div class="video-bg__content">
+            <div className="effects"></div>
+            <div className="video-bg__content">
               <h1>Algeria</h1>
             </div>
           </div>
         </section>
         <hr></hr>
 
-        <section class="info">
+        <section className="info">
           <h2>Information about the Country</h2>
-          <section class="services">
-            <div id="our-services-1" class="our-services">
+          <section className="services">
+            <div id="our-services-1" className="our-services">
               <h3>Geography and Culture</h3>
               <p>
                 Algeria, with its diverse landscapes, is situated in North
@@ -55,7 +55,7 @@ export const Alg = () => {
                 showcase Algeria's unique blend of history and culture.
               </p>
             </div>
-            <div id="our-services-2" class="our-services">
+            <div id="our-services-2" className="our-services">
               <h3>History and Traditions</h3>
               <p>
                 Algeria has a compelling history, marked by periods of Berber
@@ -69,8 +69,8 @@ export const Alg = () => {
             </div>
           </section>
 
-          <section class="services">
-            <div id="our-services-1" class="our-services">
+          <section className="services">
+            <div id="our-services-1" className="our-services">
               <h3>Natural Wonders</h3>
               <p>
                 Algeria is home to natural wonders like the Tassili n'Ajjer
@@ -79,7 +79,7 @@ export const Alg = () => {
                 into the country's geological and cultural history.
               </p>
             </div>
-            <div id="our-services-2" class="our-services">
+            <div id="our-services-2" className="our-services">
               <h3>Innovation and Heritage</h3>
               <p>
                 Modern Algeria is making strides in various fields, from science
@@ -96,13 +96,13 @@ export const Alg = () => {
         <section>
           <h2>Vizualization</h2>
 
-          <div class="slider-wrapper">
-            <div class="slider">
+          <div className="slider-wrapper">
+            <div className="slider">
               <img id="slide-1" src={one} />
               <img id="slide-2" src={two} />
               <img id="slide-3" src={three} />
             </div>
-            <div class="slider-nav">
+            <div className="slider-nav">
               <a href="#slide-1"></a>
               <a href="#slide-2"></a>
               <a href="#slide-3"></a>
@@ -111,7 +111,7 @@ export const Alg = () => {
         </section>
 
         <hr></hr>
-        <section class="useful_sources">
+        <section className="useful_sources">
           <h2>Information</h2>
           <div>
             Explore more about Algeria through these useful resources:
@@ -151,7 +151,7 @@ export const Alg = () => {
         </footer>
       </body>
     </>
-  );
-};
+  )
+}
 
-export default Alg;
+export default Alg

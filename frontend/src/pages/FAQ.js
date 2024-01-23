@@ -1,26 +1,26 @@
-import React, { useEffect } from "react";
-import "./App.css";
+import React, { useEffect } from 'react'
+import './App.css'
 
 export const FAQ = () => {
   useEffect(() => {
-    var acc = document.getElementsByClassName("accordion");
-    var i;
+    const acc = document.getElementsByClassName('accordion')
+    let i
 
     for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        this.parentElement.classList.toggle("active");
+      acc[i].addEventListener('click', function () {
+        this.classList.toggle('active')
+        this.parentElement.classList.toggle('active')
 
-        var pannel = this.nextElementSibling;
+        const pannel = this.nextElementSibling
 
-        if (pannel.style.display === "block") {
-          pannel.style.display = "none";
+        if (pannel.style.display === 'block') {
+          pannel.style.display = 'none'
         } else {
-          pannel.style.display = "block";
+          pannel.style.display = 'block'
         }
-      });
+      })
     }
-  }, []);
+  }, [])
 
   return (
     <>
@@ -28,7 +28,7 @@ export const FAQ = () => {
         <header>
           <nav>
             <h1>Созидание</h1>
-            <section class="head_options">
+            <section className="head_options">
               <a href="/home">Home</a>
               <a href="russia">Russia</a>
 
@@ -211,6 +211,6 @@ export const FAQ = () => {
         </footer>
       </body>
     </>
-  );
-};
-export default FAQ;
+  )
+}
+export default FAQ

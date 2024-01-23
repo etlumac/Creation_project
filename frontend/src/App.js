@@ -1,9 +1,7 @@
-import {Routing}from './Routes';
+import { Routing } from './Routes'
 
-
-export const App =() =>{
-    return (
+export const App = () => {
+  return (
         <Routing />
-    );
+  )
 }
-

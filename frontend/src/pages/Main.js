@@ -1,87 +1,85 @@
-import React from "react";
-import "./App.css";
+import React, { useEffect, useState } from 'react'
+import './App.css'
 
-import { useEffect, useState } from "react";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faCake } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope, faCake } from '@fortawesome/free-solid-svg-icons'
 import {
   faFacebook,
   faInstagram,
-  faTelegram,
-} from "@fortawesome/free-brands-svg-icons";
+  faTelegram
+} from '@fortawesome/free-brands-svg-icons'
 
-import axios from "axios";
+import axios from 'axios'
 
-import logo from "../Images/IMG_9533.jpg";
-import forum from "../Images/russian-algerian-business-foruma-platform-for-establishing-business-contacts-and-promoting-trade-be-795838940.png";
-import culture from "../Images/international-cultural-weekan-event-aimed-at-showcasing-the-culture-art-and-traditions-of-russia--651825025.png";
-import education from "../Images/educational-exchangea-student-exchange-program-designed-to-deepen-knowledge-and-strengthen-ties-bet-552959897.png";
+import logo from '../Images/IMG_9533.jpg'
+import forum from '../Images/russian-algerian-business-foruma-platform-for-establishing-business-contacts-and-promoting-trade-be-795838940.png'
+import culture from '../Images/international-cultural-weekan-event-aimed-at-showcasing-the-culture-art-and-traditions-of-russia--651825025.png'
+import education from '../Images/educational-exchangea-student-exchange-program-designed-to-deepen-knowledge-and-strengthen-ties-bet-552959897.png'
 
-import one from "../Images/diplomatsour-team-includes-experienced-diplomats-who-can-assist-in-establishing-contacts-and-creat-787448927.png";
-import two from "../Images/professional-consultantsour-consultants-provide-expert-opinions-and-support-for-successful-interact-606966667.png";
-import three from "../Images/team-collaborationexperts-in-collaborationour-team-consists-of-highly-qualified-specialists-read-181015212.png";
+import one from '../Images/diplomatsour-team-includes-experienced-diplomats-who-can-assist-in-establishing-contacts-and-creat-787448927.png'
+import two from '../Images/professional-consultantsour-consultants-provide-expert-opinions-and-support-for-successful-interact-606966667.png'
+import three from '../Images/team-collaborationexperts-in-collaborationour-team-consists-of-highly-qualified-specialists-read-181015212.png'
 
-import four from "../Images/cultural-tiesrussian-and-algerian-artists-musicians-and-writers-collaborate-to-create-unique-pro-550254195.png";
-import five from "../Images/economic-partnershiprussia-and-algeria-are-actively-developing-trade-and-economic-cooperation-esp-42285790.png";
-import six from "../Images/education-and-sciencethere-is-an-active-exchange-of-students-researchers-and-educators-between-r-27290424.png";
+import four from '../Images/cultural-tiesrussian-and-algerian-artists-musicians-and-writers-collaborate-to-create-unique-pro-550254195.png'
+import five from '../Images/economic-partnershiprussia-and-algeria-are-actively-developing-trade-and-economic-cooperation-esp-42285790.png'
+import six from '../Images/education-and-sciencethere-is-an-active-exchange-of-students-researchers-and-educators-between-r-27290424.png'
 import Chatbot from 'react-chatbot-kit'
 import 'react-chatbot-kit/build/main.css'
 
-import ActionProvider from '../ChatBot/ActionProvider';
-import config from '../ChatBot/config';
-import MessageParser from '../ChatBot/MessageParser';
+import ActionProvider from '../ChatBot/ActionProvider'
+import config from '../ChatBot/config'
+import MessageParser from '../ChatBot/MessageParser'
 export const Ap = () => {
-  const initialFormData = JSON.parse(localStorage.getItem("formData")) || {
-    name: "",
-    email: "",
-    message: "",
-  };
+  const initialFormData = JSON.parse(localStorage.getItem('formData')) || {
+    name: '',
+    email: '',
+    message: ''
+  }
 
-  const [formData, setFormData] = useState(initialFormData);
+  const [formData, setFormData] = useState(initialFormData)
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
-  };
+    const { name, value } = e.target
+    setFormData((prevData) => ({ ...prevData, [name]: value }))
+  }
 
   useEffect(() => {
-    localStorage.setItem("formData", JSON.stringify(formData));
-  }, [formData]);
+    localStorage.setItem('formData', JSON.stringify(formData))
+  }, [formData])
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
     try {
-      await axios.post("/api/submitForm", formData);
+      await axios.post('/api/submitForm', formData)
       setFormData({
-        name: "",
-        email: "",
-        message: "",
-      });
+        name: '',
+        email: '',
+        message: ''
+      })
 
-      localStorage.removeItem("formData");
+      localStorage.removeItem('formData')
 
-      alert("Form submitted successfully!");
+      alert('Form submitted successfully!')
     } catch (error) {
       if (
         error.response &&
         error.response.data &&
         error.response.data.message
       ) {
-        alert(error.response.data.message);
+        alert(error.response.data.message)
       } else {
-        console.error("Error submitting form:", error.message);
+        console.error('Error submitting form:', error.message)
       }
     }
-  };
+  }
 
   const scrollToContacts = () => {
-    const contactsSection = document.getElementById("contacts");
+    const contactsSection = document.getElementById('contacts')
     if (contactsSection) {
-      contactsSection.scrollIntoView({ behavior: "smooth" });
+      contactsSection.scrollIntoView({ behavior: 'smooth' })
     }
-  };
+  }
 
   return (
     <>
@@ -89,7 +87,7 @@ export const Ap = () => {
         <header>
           <nav>
             <h1>Созидание</h1>
-            <section class="head_options">
+            <section className="head_options">
               <a href="#about">About Us</a>
 
               <a href="russia">Russia</a>
@@ -112,7 +110,7 @@ export const Ap = () => {
             </div>
         <hr></hr>
 
-        <section id="about" class="about-us">
+        <section id="about" className="about-us">
           <div className="text-container">
             <h2>Conecting Russia and Algeria for mutual growth</h2>
             <p>
@@ -133,12 +131,12 @@ export const Ap = () => {
 
         <hr></hr>
 
-        <section id="our-projects" class="our-projects">
+        <section id="our-projects" className="our-projects">
           <h2>Our Projects</h2>
 
-          <section class="projects">
-            <section class="projects-n">
-              <div class="project-column">
+          <section className="projects">
+            <section className="projects-n">
+              <div className="project-column">
                 <img src={forum} alt="Project 1" />
                 <h4>Russian-Algerian Business Forum</h4>
                 <p>
@@ -148,8 +146,8 @@ export const Ap = () => {
               </div>
             </section>
 
-            <section class="projects-n">
-              <div class="project-column">
+            <section className="projects-n">
+              <div className="project-column">
                 <h4>International Cultural Week</h4>
                 <p>
                   An event aimed at showcasing the culture, art, and traditions
@@ -159,8 +157,8 @@ export const Ap = () => {
               </div>
             </section>
 
-            <section class="projects-n">
-              <div class="project-column">
+            <section className="projects-n">
+              <div className="project-column">
                 <img src={education} alt="Project 3" />
                 <h4>Educational Exchange</h4>
                 <p>
@@ -174,12 +172,12 @@ export const Ap = () => {
 
         <hr></hr>
 
-        <section id="our-team" class="our-team">
+        <section id="our-team" className="our-team">
           <h2>Our Team</h2>
 
-          <section class="team-members">
-            <section class="team-members-n">
-              <div class="team-member-column">
+          <section className="team-members">
+            <section className="team-members-n">
+              <div className="team-member-column">
                 <img src={one} alt="Team Member 1" />
                 <h4>Experts in Collaboration</h4>
                 <p>
@@ -189,8 +187,8 @@ export const Ap = () => {
               </div>
             </section>
 
-            <section class="team-members-n">
-              <div class="team-member-column">
+            <section className="team-members-n">
+              <div className="team-member-column">
                 <h4>Diplomats</h4>
                 <p>
                   Our team includes experienced diplomats who can assist in
@@ -201,8 +199,8 @@ export const Ap = () => {
               </div>
             </section>
 
-            <section class="team-members-n">
-              <div class="team-member-column">
+            <section className="team-members-n">
+              <div className="team-member-column">
                 <img src={three} alt="Team Member 2" />
                 <h4>Professional Consultants</h4>
                 <p>
@@ -216,10 +214,10 @@ export const Ap = () => {
 
         <hr></hr>
 
-        <section id="our-services" class="our-services">
+        <section id="our-services" className="our-services">
           <h2>Our Services</h2>
-          <section class="services">
-            <div class="services-block">
+          <section className="services">
+            <div className="services-block">
               <img src={five} alt="Team Member 1" />
               <h3>Economic Partnership</h3>
               <p>
@@ -228,7 +226,7 @@ export const Ap = () => {
               </p>
             </div>
 
-            <div class="services-block">
+            <div className="services-block">
               <img src={six} alt="Team Member 1" />
               <h3>Education and Science</h3>
               <p>
@@ -237,7 +235,7 @@ export const Ap = () => {
               </p>
             </div>
 
-            <div class="services-block">
+            <div className="services-block">
               <img src={four} alt="Team Member 1" />
               <h3>Cultural Ties</h3>
               <p>
@@ -251,7 +249,7 @@ export const Ap = () => {
 
         <hr></hr>
 
-        <section id="contacts" class="contacts">
+        <section id="contacts" className="contacts">
           <section>
             <h2>Contacs</h2>
 
@@ -288,23 +286,23 @@ export const Ap = () => {
           <hr></hr>
           <section>
             <h3>Follow Us</h3>
-            <section class="pils-links">
-              <span class="pils">
+            <section className="pils-links">
+              <span className="pils">
                 <a href="#">
                   <FontAwesomeIcon icon={faTelegram} /> Telegram
                 </a>
               </span>
-              <span class="pils">
+              <span className="pils">
                 <a href="#">
                   <FontAwesomeIcon icon={faCake} /> Pirog
                 </a>
               </span>
-              <span class="pils">
+              <span className="pils">
                 <a href="#">
                   <FontAwesomeIcon icon={faInstagram} /> Instagram
                 </a>
               </span>
-              <span class="pils">
+              <span className="pils">
                 <a href="#">
                   <FontAwesomeIcon icon={faFacebook} /> Facebook
                 </a>
@@ -330,7 +328,7 @@ export const Ap = () => {
         </footer>
       </body>
     </>
-  );
-};
+  )
+}
 
-export default Ap;
+export default Ap

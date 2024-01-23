@@ -1,5 +1,5 @@
-import { Routing } from "./Routes";
+import { Routing } from './Routes'
 
 export const App = () => {
-  return <Routing />;
-};
+  return <Routing />
+}
