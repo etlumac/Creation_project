@@ -27,23 +27,10 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "eslint . --fix && stylelint ./frontend --fix"
     }
   },
-  "lint-staged": {
-    "frontend/**/*.{js,jsx}": [
-      "npm run lint:fix",
-      "git add"
-    ],
-    "backend/**/*.{js,jsx}": [
-      "npm run lint:fix",
-      "git add"
-    ],
-    "frontend/**/*.css": [
-      "stylelint --fix",
-      "git add"
-    ]
-  },
+  
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
