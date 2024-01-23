@@ -40,7 +40,7 @@
       "git add"
     ],
     "frontend/**/*.css": [
-      "npm run lint:css:fix",
+      "stylelint --fix",
       "git add"
     ]
   },
