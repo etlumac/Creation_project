@@ -39,7 +39,7 @@
       "npm run lint:fix",
       "git add"
     ],
-    "frontend/**/*.{css}": [
+    "frontend/**/*.css": [
       "npm run lint:css:fix",
       "git add"
     ]
