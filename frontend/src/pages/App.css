@@ -58,6 +58,7 @@ nav a#podval {
 nav button {
   margin: 0 5vw;
 }
+
 section {
   padding: 20px;
   margin-bottom: 20px;
@@ -99,8 +100,7 @@ img {
   position: relative;
   max-width: 256px;
   padding: 100px;
-
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0);
+  box-shadow: 0 0 5px rgb(0 0 0 / 0%);
   transition: box-shadow 0.3s ease;
 }
 
@@ -131,13 +131,10 @@ button {
 
 .pils {
   background: var(--pils-back);
-  -webkit-box-shadow: inset 0 0 0 1px var(--border),
-    0 10px 30px -10px rgba(0, 0, 0, 0.12);
   box-shadow: inset 0 0 0 1px var(--border),
-    0 10px 30px -10px rgba(0, 0, 0, 0.12);
+    0 10px 30px -10px rgb(0 0 0 / 12%);
   border-radius: 60px;
   font-size: 13px;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   cursor: pointer;
   margin: 5px;
@@ -160,15 +157,14 @@ button {
 }
 
 .pils:hover {
-  -webkit-box-shadow: inset 0 0 0 1px #6f95fe, 0 10px 35px -10px #6f95fe;
   box-shadow: inset 0 0 0 1px #6f95fe, 0 10px 35px -10px #6f95fe;
 }
 
-.pils:hover FontAwesomeIcon {
+.pils:hover fontawesomeicon {
   color: #6f95fe;
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   .pils-links {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
@@ -216,6 +212,7 @@ button {
   text-align: center;
   max-width: 32%;
 }
+
 .project-column .team-member-column {
   flex-grow: 1;
   display: flex;
@@ -254,7 +251,7 @@ form textarea {
   width: calc(100% - 60px);
   font-size: 20px;
   padding: 10px 0 10px 30px;
-  font-family: "Montserrat", sans-serif;
+  font-family: Montserrat, sans-serif;
   border: 1px solid #333;
   border-radius: 1px;
   margin-bottom: 20px;
@@ -288,12 +285,12 @@ form textarea {
   z-index: 2;
   width: 100%;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgb(0 0 0 / 60%);
 }
 
 .video-bg__content {
   z-index: 2;
-  color: #ffffff;
+  color: #fff;
   font-size: 50px;
 }
 
@@ -332,7 +329,7 @@ form textarea {
 }
 
 .services-block:hover {
-  box-shadow: 0 0 10px rgba(60, 61, 61, 0.7);
+  box-shadow: 0 0 10px rgb(60 61 61 / 70%);
 }
 
 .logo-small {
@@ -358,7 +355,7 @@ form textarea {
 
 .accordion {
   background-color: white;
-  color: rgba(0, 0, 0, 0.8);
+  color: rgb(0 0 0 / 80%);
   cursor: pointer;
   font-size: 1.2rem;
   width: 100%;
@@ -383,28 +380,30 @@ form textarea {
 .accordion:hover {
   background-color: #f1f7f5;
 }
+
 .pannel {
-  padding: 0 2rem 2.5rem 2rem;
-  background-color: white;
+  padding: 0 2rem 2.5rem;
   overflow: hidden;
   background-color: #f1f7f5;
   display: none;
 }
+
 .pannel p {
-  color: rgba(0, 0, 0, 0.7);
+  color: rgb(0 0 0 / 70%);
   font-size: 1.2rem;
   line-height: 1.4;
 }
 
 .faq {
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgb(0 0 0 / 20%);
   margin: 10px 0;
 }
+
 .faq.active {
   border: none;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .accordion {
     font-size: 1rem;
     padding: 1.5rem;
@@ -412,12 +411,12 @@ form textarea {
   }
 
   .pannel {
-    padding: 0 1rem 1.5rem 1rem; /* Уменьшим отступы для мобильных устройств */
+    padding: 0 1rem 1.5rem; /* Уменьшим отступы для мобильных устройств */
   }
 }
 
 /* Добавим медиа-запрос для устройств с шириной экрана до 768px (например, телефоны) */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   h1 {
     font-size: 100%; /* Уменьшим размер шрифта для мобильных устройств */
   }
@@ -459,7 +458,7 @@ form textarea {
 }
 
 /* Добавим медиа-запрос для устройств с шириной экрана от 769px до 1200px (например, планшеты) */
-@media (min-width: 769px) and (max-width: 1200px) {
+@media (width >= 769px) and (width <= 1200px) {
   .pils-links {
     justify-content: space-around; /* Равномерно распределяем ссылки на пилс вертикально для планшетов */
   }
@@ -474,25 +473,28 @@ form textarea {
 }
 
 /* Добавим медиа-запрос для устройств с шириной экрана от 1201px (например, десктопы) */
+
 /* @media (min-width: 1201px) {
   .logo-small {
     width: 25%; /* Уменьшим размер логотипа для десктопов */
+
 /* }
 } */
 nav a:hover {
   background-color: #f0f0f0; /* Цвет подсветки при наведении */
-  box-shadow: 0 0 10px rgba(111, 149, 254, 0.7); /* Тень при наведении */
+  box-shadow: 0 0 10px rgb(111 149 254 / 70%); /* Тень при наведении */
   border: 1px solid #6f95fe; /* Окантовка при наведении */
 }
+
 nav a#podval:hover {
   color: black;
   background-color: #f0f0f0; /* Цвет подсветки при наведении */
-  box-shadow: 0 0 10px rgba(111, 149, 254, 0.7); /* Тень при наведении */
+  box-shadow: 0 0 10px rgb(111 149 254 / 70%); /* Тень при наведении */
   border: 1px solid #6f95fe; /* Окантовка при наведении */
 }
 
 /* Стили для мобильных устройств (ширина экрана менее 768 пикселей) */
-@media (max-width: 767px) {
+@media (width <= 767px) {
   .services {
     flex-direction: column; /* Расположение блоков вертикально */
     align-items: center; /* Выравнивание по центру */
@@ -504,6 +506,7 @@ nav a#podval:hover {
     z-index: 1;
   }
 }
+
 .container {
   padding: 2rem;
 }
@@ -520,7 +523,7 @@ nav a#podval:hover {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  box-shadow: 0 1.5rem 3rem -0.75rem hsl(0deg 0% 0% / 25%);
   border-radius: 0.5rem;
   -ms-overflow-style: none; /* Hide scrollbar IE and Edge */
   scrollbar-width: none; /* Hide scrollbar Firefox */
@@ -559,12 +562,14 @@ nav a#podval:hover {
 .slider-nav a:hover {
   opacity: 1;
 }
+
 .scrollable-div{
   text-align: flex-end;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
 }
+
 .App-header{
   z-index: 3;
   margin-top: 90vh;
@@ -580,9 +585,11 @@ nav a#podval:hover {
     background-color:gray;
     color:white;
   }
+
   .react-chatbot-kit-chat-bot-message-arrow {
     border-right:8px solid gray;
   }
+
   .react-chatbot-kit-chat-btn-send {
     background-color:gray;
   }
@@ -596,7 +603,7 @@ nav a#podval:hover {
   border: none;
   cursor: pointer;
   padding: .5rem 1rem;
-  margin-left: 0rem;
+  margin-left: 0;
 }
 
 .second_btn{
