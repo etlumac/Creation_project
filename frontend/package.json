@@ -24,7 +24,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint:css": "stylelint '**/*.css'",
+    "lint:css": "stylelint \"**/*.css\"",
     "lint:css:fix": "stylelint '**/*.css' --fix"
   },
   "browserslist": {
@@ -40,6 +40,7 @@
     ]
   },
   "devDependencies": {
+    "eslint-plugin-compat": "^4.2.0",
     "stylelint": "^16.2.0",
     "stylelint-config-standard": "^36.0.0"
   }
