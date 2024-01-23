@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './App.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faCake } from '@fortawesome/free-solid-svg-icons'
+import { faCake } from '@fortawesome/free-solid-svg-icons'
 import {
   faFacebook,
   faInstagram,
