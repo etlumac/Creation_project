@@ -2,7 +2,7 @@ FROM node:19-alpine as builder
 
 WORKDIR /creation
 COPY package.json package-lock.json ./
-RUN npm ci
+RUN npm i
 RUN npm install
 RUN npm install axios
 RUN npm install react-chatbot-kit
