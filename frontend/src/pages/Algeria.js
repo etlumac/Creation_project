@@ -15,9 +15,7 @@ export const Alg = () => {
             <section className="head_options">
               <a href="/home">Home</a>
               <a href="russia">Russia</a>
-
               <a href="algeria">Algeria</a>
-
               <a href="FAQ">FAQ</a>
             </section>
           </nav>
@@ -52,7 +50,7 @@ export const Alg = () => {
                 coastline, the country boasts a rich cultural heritage
                 influenced by its Berber, Arab, and French roots. Historical
                 sites like the ancient city of Timgad and the Casbah of Algiers
-                showcase Algeria's unique blend of history and culture.
+                showcase Algeria&apos;s unique blend of history and culture.
               </p>
             </div>
             <div id="our-services-2" className="our-services">
@@ -73,10 +71,10 @@ export const Alg = () => {
             <div id="our-services-1" className="our-services">
               <h3>Natural Wonders</h3>
               <p>
-                Algeria is home to natural wonders like the Tassili n'Ajjer
+                Algeria is home to natural wonders like the Tassili n&apos;Ajjer
                 National Park, known for its prehistoric rock art and unique
                 geological formations. The Ahaggar Mountains offer a glimpse
-                into the country's geological and cultural history.
+                into the country&apos;s geological and cultural history.
               </p>
             </div>
             <div id="our-services-2" className="our-services">
@@ -84,9 +82,9 @@ export const Alg = () => {
               <p>
                 Modern Algeria is making strides in various fields, from science
                 to literature. The country values its literary heritage, with
-                notable authors like Albert Camus. Algeria's traditional music
-                and dance are celebrated globally, showcasing the richness of
-                its cultural expression.
+                notable authors like Albert Camus. Algeria&apos;s traditional
+                music and dance are celebrated globally, showcasing the richness
+                of its cultural expression.
               </p>
             </div>
           </section>
@@ -131,7 +129,7 @@ export const Alg = () => {
               </li>
               <li>
                 <a href="https://jesseatsandtravels.com/how-to-eat-like-an-algerian/">
-                  Traveler's Guide to Algerian Cuisine
+                  Traveler&apos;s Guide to Algerian Cuisine
                 </a>
               </li>
             </ul>
