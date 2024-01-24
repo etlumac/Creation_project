@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -36,8 +38,7 @@ nav {
 nav a {
   color: black;
   text-decoration: none;
-  padding-top: 1%;
-  padding: 8px 15px;
+  padding: 1% 15px 8px; 
   border: 1px solid white;
   border-radius: 5px;
   display: inline-block;
@@ -47,16 +48,11 @@ nav a {
 nav a#podval {
   color: white;
   text-decoration: none;
-  padding-top: 1%;
-  padding: 8px 15px;
+  padding: 1% 15px 8px;
   border: 1px solid white;
   border-radius: 5px;
   display: inline-block;
   margin: 0 5px;
-}
-
-nav button {
-  margin: 0 5vw;
 }
 
 section {
@@ -82,8 +78,7 @@ img {
 .our-team,
 .our-services,
 .contacts {
-  margin-top: 20px;
-  margin: 2%;
+  margin: 20px 2% 2%;
 }
 
 .services {
@@ -115,12 +110,13 @@ footer {
   text-align: center;
 }
 
-button {
+nav button {
   color: white;
   background-color: black;
   width: 10ch;
   height: 5vh;
   border: 0;
+  margin: 0 5vw;
 }
 
 .pils-links {
@@ -141,27 +137,68 @@ button {
   color: var(--text-primary);
 }
 
-.pils a,
-.pils a:visited,
-.pils a:link {
+.useful_sources a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.slider-nav a {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+
+.accordion i {
+  font-size: 1.6rem;
+}
+
+.pils a{
   display: block;
   text-decoration: none;
   color: var(--main-2-fore);
   padding: 5px 10px;
 }
 
-.pils a i,
-.pils a:visited i,
-.pils a:link i {
+.pils a i{
   padding-right: 2px;
+}
+
+nav a:hover {
+  background-color: #f0f0f0; 
+  box-shadow: 0 0 10px rgb(111 149 254 / 70%); 
+  border: 1px solid #6f95fe; 
+}
+
+nav a#podval:hover {
+  color: black;
+  background-color: #f0f0f0; 
+  box-shadow: 0 0 10px rgb(111 149 254 / 70%); 
+  border: 1px solid #6f95fe; 
+}
+
+.pils a:visited,
+.pils a:link{
+  display: block;
+  text-decoration: none;
+  color: var(--main-2-fore);
+  padding: 5px 10px;
+}
+
+.pils a:visited i,
+.pils a:link i{
+  padding-right: 2px;
+}
+
+.slider-nav a:hover {
+  opacity: 1;
 }
 
 .pils:hover {
   box-shadow: inset 0 0 0 1px #6f95fe, 0 10px 35px -10px #6f95fe;
-}
-
-.pils:hover fontawesomeicon {
-  color: #6f95fe;
 }
 
 @media (width >= 768px) {
@@ -176,7 +213,7 @@ button {
   width: 25%;
   height: auto;
   float: right;
-  margin-right: 50px;
+  margin: 5% 50px 5% 5%;
 }
 
 .projects {
@@ -318,11 +355,6 @@ form textarea {
   margin-bottom: 8px;
 }
 
-.useful_sources a {
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-}
 
 .useful_sources a:hover {
   text-decoration: underline;
@@ -331,12 +363,6 @@ form textarea {
 .services-block:hover {
   box-shadow: 0 0 10px rgb(60 61 61 / 70%);
 }
-
-.logo-small {
-  margin: 5%;
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 .wrapper {
   max-width: 75%;
@@ -372,9 +398,6 @@ form textarea {
   word-wrap: break-word;
 }
 
-.accordion i {
-  font-size: 1.6rem;
-}
 
 .active,
 .accordion:hover {
@@ -418,42 +441,42 @@ form textarea {
 /* Добавим медиа-запрос для устройств с шириной экрана до 768px (например, телефоны) */
 @media (width <= 768px) {
   h1 {
-    font-size: 100%; /* Уменьшим размер шрифта для мобильных устройств */
+    font-size: 100%; 
   }
 
   header {
-    height: auto; /* Уменьшим высоту заголовка для мобильных устройств */
+    height: auto; 
   }
 
   nav {
-    flex-direction: column; /* Располагаем пункты меню вертикально для мобильных устройств */
+    flex-direction: column; 
     text-align: center;
   }
 
   nav a {
-    padding: 5px 0; /* Уменьшим отступы для пунктов меню на мобильных устройствах */
-    margin-bottom: 10px; /* Добавим расстояние между ссылками */
+    padding: 5px 0; 
+    margin-bottom: 10px; 
   }
 
   .projects,
   .projects-n,
   .team-members,
   .team-members-n {
-    flex-direction: column; /* Отображаем блоки с проектами и командой вертикально для мобильных устройств */
-    max-width: 100%; /* Ширина блоков на всю ширину экрана */
+    flex-direction: column; 
+    max-width: 100%; 
   }
 
   .services-block {
-    padding: 20px; /* Уменьшим отступы в блоках услуг для мобильных устройств */
+    padding: 20px; 
   }
 
   .logo-small {
-    width: 50%; /* Уменьшим размер логотипа для мобильных устройств */
-    margin-right: 0; /* Уберем отступ справа для мобильных устройств */
+    width: 50%; 
+    margin-right: 0; 
   }
 
   .useful_sources {
-    padding: 10px; /* Уменьшим отступы для блока с полезными источниками на мобильных устройствах */
+    padding: 10px; 
   }
 }
 
@@ -472,18 +495,6 @@ form textarea {
   }
 }
 
-nav a:hover {
-  background-color: #f0f0f0; 
-  box-shadow: 0 0 10px rgb(111 149 254 / 70%); 
-  border: 1px solid #6f95fe; 
-}
-
-nav a#podval:hover {
-  color: black;
-  background-color: #f0f0f0; 
-  box-shadow: 0 0 10px rgb(111 149 254 / 70%); 
-  border: 1px solid #6f95fe; 
-}
 
 /* Стили для мобильных устройств (ширина экрана менее 768 пикселей) */
 @media (width <= 767px) {
@@ -542,18 +553,6 @@ nav a#podval:hover {
   z-index: 1;
 }
 
-.slider-nav a {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-  background-color: #fff;
-  opacity: 0.75;
-  transition: opacity ease 250ms;
-}
-
-.slider-nav a:hover {
-  opacity: 1;
-}
 
 .scrollable-div{
   text-align: flex-end;
