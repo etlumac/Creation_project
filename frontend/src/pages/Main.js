@@ -30,7 +30,7 @@ import ActionProvider from '../ChatBot/ActionProvider'
 import config from '../ChatBot/config'
 import MessageParser from '../ChatBot/MessageParser'
 export const Ap = () => {
-  const [isChatbotVisible, setChatbotVisibility] = useState(true)
+  const [isChatbotVisible, setChatbotVisibility] = useState(false)
 
   const toggleChatbotVisibility = () => {
     setChatbotVisibility((prevVisibility) => !prevVisibility)
@@ -102,14 +102,14 @@ export const Ap = () => {
 
               <a href="FAQ">FAQ</a>
 
-              <button className="black_button" id = "first" onClick={scrollToContacts}>Contacs</button>
+              <button className="black_button" id = "first" onClick={scrollToContacts}>Contacts</button>
             </section>
           </nav>
         </header>
         <div className="scrollable-div">
           <header className="App-header">
-            <button className="btn_toggle" onClick={toggleChatbotVisibility}>
-              Toggle Chatbot
+            <button className={`btn_toggle ${isChatbotVisible ? 'bot-open' : ''}`} onClick={toggleChatbotVisibility}>
+              Chat
             </button>
             {isChatbotVisible && (
               <Chatbot
