@@ -27,7 +27,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "eslint . --fix && frontend/**/*.css' --fix"
+      "pre-commit": "eslint . --fix && stylelint 'frontend/**/*.css' --fix"
     }
   },
   "scripts": {
