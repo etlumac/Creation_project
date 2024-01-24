@@ -30,12 +30,12 @@ import ActionProvider from '../ChatBot/ActionProvider'
 import config from '../ChatBot/config'
 import MessageParser from '../ChatBot/MessageParser'
 export const Ap = () => {
-  const [isChatbotVisible, setChatbotVisibility] = useState(true);
+  const [isChatbotVisible, setChatbotVisibility] = useState(true)
 
   const toggleChatbotVisibility = () => {
-    setChatbotVisibility((prevVisibility) => !prevVisibility);
-  };
-  
+    setChatbotVisibility((prevVisibility) => !prevVisibility)
+  }
+
   const initialFormData = JSON.parse(localStorage.getItem('formData')) || {
     name: '',
     email: '',
@@ -102,7 +102,7 @@ export const Ap = () => {
 
               <a href="FAQ">FAQ</a>
 
-              <button onClick={scrollToContacts}>Contacs</button>
+              <button className="black_button" onClick={scrollToContacts}>Contacs</button>
             </section>
           </nav>
         </header>
@@ -136,7 +136,7 @@ export const Ap = () => {
               and exchange between the two countries, promoting economic
               development and cultural understanding.
             </p>
-            <button onClick={scrollToContacts}>Contacts</button>
+            <button className="black_button" onClick={scrollToContacts}>Contacts</button>
           </div>
           <img src={logo} alt="Logo" className="logo-small" />
         </section>
@@ -292,7 +292,7 @@ export const Ap = () => {
                 required
               />
 
-              <button type="submit">Submit</button>
+              <button className="black_button" type="submit">Submit</button>
             </form>
           </section>
           <hr></hr>
