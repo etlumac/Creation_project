@@ -27,7 +27,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "eslint . --fix && stylelint 'frontend/**/*.css' --fix"
+      "pre-commit": "npm run lint:css:fix && git add ."
     }
   },
   "scripts": {
