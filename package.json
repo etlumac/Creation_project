@@ -27,12 +27,13 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "eslint . --fix && stylelint ./frontend --fix"
+      "pre-commit": "eslint . --fix && frontend/**/*.css' --fix"
     }
   },
-  
   "scripts": {
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "lint:css": "stylelint \"frontend/**/*.css\"",
+    "lint:css:fix": "stylelint 'frontend/**/*.css' --fix"
   }
 }
