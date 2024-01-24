@@ -116,6 +116,9 @@ footer {
   width: 10ch;
   height: 5vh;
   border: 0;
+}
+
+.black_button#first{
   margin: 0 5vw;
 }
 

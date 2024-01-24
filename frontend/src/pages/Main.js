@@ -102,7 +102,7 @@ export const Ap = () => {
 
               <a href="FAQ">FAQ</a>
 
-              <button className="black_button" onClick={scrollToContacts}>Contacs</button>
+              <button className="black_button" id = "first" onClick={scrollToContacts}>Contacs</button>
             </section>
           </nav>
         </header>
@@ -300,22 +300,22 @@ export const Ap = () => {
             <h3>Follow Us</h3>
             <section className="pils-links">
               <span className="pils">
-                <a href="#">
+                <a href="https://telegram.org">
                   <FontAwesomeIcon icon={faTelegram} /> Telegram
                 </a>
               </span>
               <span className="pils">
-                <a href="#">
+                <a href="https://www.stolle.ru">
                   <FontAwesomeIcon icon={faCake} /> Pirog
                 </a>
               </span>
               <span className="pils">
-                <a href="#">
+                <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjvtOrw5_aDAxWAPhAIHUFUDzcQFnoECA8QAQ&url=https%3A%2F%2Fwww.instagram.com%2Fetlumach%2F&usg=AOvVaw14KwZpMYviK7M8ynDzCbtq&opi=89978449">
                   <FontAwesomeIcon icon={faInstagram} /> Instagram
                 </a>
               </span>
               <span className="pils">
-                <a href="#">
+                <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjDwreg6PaDAxWjFBAIHR9YCdcQFnoECAcQAQ&url=https%3A%2F%2Fwww.facebook.com%2F%3Flocale%3Dru_RU&usg=AOvVaw0KJoe-iJVCOSB6M_2aRrcK&opi=89978449">
                   <FontAwesomeIcon icon={faFacebook} /> Facebook
                 </a>
               </span>
