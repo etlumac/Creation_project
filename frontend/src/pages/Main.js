@@ -136,7 +136,7 @@ export const Ap = () => {
               and exchange between the two countries, promoting economic
               development and cultural understanding.
             </p>
-            <button onClick={scrollToContacts}>Contacs</button>
+            <button onClick={scrollToContacts}>Contacts</button>
           </div>
           <img src={logo} alt="Logo" className="logo-small" />
         </section>
@@ -263,7 +263,7 @@ export const Ap = () => {
 
         <section id="contacts" className="contacts">
           <section>
-            <h2>Contacs</h2>
+            <h2>Contacts</h2>
 
             <form onSubmit={handleSubmit}>
               <label>Name:</label>

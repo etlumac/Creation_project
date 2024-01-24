@@ -580,7 +580,8 @@ nav a#podval:hover {
   position: fixed;
   top: 20px;
   padding-bottom: 40%;
-
+}
+  
   .react-chatbot-kit-chat-bot-message {
     background-color:gray;
     color:white;
@@ -594,7 +595,7 @@ nav a#podval:hover {
     background-color:gray;
   }
 
-}
+
 
 .btn_setting{
   background-color:gray;
