@@ -34,5 +34,6 @@
     "lint:fix": "eslint . --fix",
     "lint:css": "stylelint \"frontend/**/*.css\"",
     "lint:css:fix": "stylelint 'frontend/**/*.css' --fix"
-  }
+  },
+  "proxy": "http://creation_backend:3001/"
 }
