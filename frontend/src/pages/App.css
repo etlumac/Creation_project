@@ -110,7 +110,7 @@ footer {
   text-align: center;
 }
 
-button {
+.black_button{
   color: white;
   background-color: black;
   width: 10ch;
