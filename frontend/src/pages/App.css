@@ -7,7 +7,7 @@ body {
 
 h1 {
   font-size: 125%;
-},
+}
 
 h2 {
   text-align: center;
@@ -411,7 +411,7 @@ form textarea {
   }
 
   .pannel {
-    padding: 0 1rem 1.5rem; /* Уменьшим отступы для мобильных устройств */
+    padding: 0 1rem 1.5rem; 
   }
 }
 
@@ -460,49 +460,41 @@ form textarea {
 /* Добавим медиа-запрос для устройств с шириной экрана от 769px до 1200px (например, планшеты) */
 @media (width >= 769px) and (width <= 1200px) {
   .pils-links {
-    justify-content: space-around; /* Равномерно распределяем ссылки на пилс вертикально для планшетов */
+    justify-content: space-around; 
   }
 
   .logo-small {
-    width: 30%; /* Уменьшим размер логотипа для планшетов */
+    width: 30%; 
   }
 
   .services-block {
-    max-width: 50%; /* Уменьшим ширину блоков услуг для планшетов */
+    max-width: 50%; 
   }
 }
 
-/* Добавим медиа-запрос для устройств с шириной экрана от 1201px (например, десктопы) */
-
-/* @media (min-width: 1201px) {
-  .logo-small {
-    width: 25%; /* Уменьшим размер логотипа для десктопов */
-
-/* }
-} */
 nav a:hover {
-  background-color: #f0f0f0; /* Цвет подсветки при наведении */
-  box-shadow: 0 0 10px rgb(111 149 254 / 70%); /* Тень при наведении */
-  border: 1px solid #6f95fe; /* Окантовка при наведении */
+  background-color: #f0f0f0; 
+  box-shadow: 0 0 10px rgb(111 149 254 / 70%); 
+  border: 1px solid #6f95fe; 
 }
 
 nav a#podval:hover {
   color: black;
-  background-color: #f0f0f0; /* Цвет подсветки при наведении */
-  box-shadow: 0 0 10px rgb(111 149 254 / 70%); /* Тень при наведении */
-  border: 1px solid #6f95fe; /* Окантовка при наведении */
+  background-color: #f0f0f0; 
+  box-shadow: 0 0 10px rgb(111 149 254 / 70%); 
+  border: 1px solid #6f95fe; 
 }
 
 /* Стили для мобильных устройств (ширина экрана менее 768 пикселей) */
 @media (width <= 767px) {
   .services {
-    flex-direction: column; /* Расположение блоков вертикально */
-    align-items: center; /* Выравнивание по центру */
+    flex-direction: column; 
+    align-items: center; 
   }
 
   .services-block {
-    margin-top: 10px; /* Уменьшаем отступ между блоками в вертикальной компоновке */
-    max-width: 100%; /* Ширина блока на всю доступную ширину */
+    margin-top: 10px; 
+    max-width: 100%; 
     z-index: 1;
   }
 }
@@ -525,11 +517,11 @@ nav a#podval:hover {
   scroll-behavior: smooth;
   box-shadow: 0 1.5rem 3rem -0.75rem hsl(0deg 0% 0% / 25%);
   border-radius: 0.5rem;
-  -ms-overflow-style: none; /* Hide scrollbar IE and Edge */
-  scrollbar-width: none; /* Hide scrollbar Firefox */
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
+
 .slider::-webkit-scrollbar {
   display: none;
 }
