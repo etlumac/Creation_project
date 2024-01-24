@@ -20,10 +20,11 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     sendMessage(message);
     }
   
-  const updateState =(message) =>{
+  const updateState =(message,checker = "") =>{
     setState((prev) => ({
       ...prev,
       messages: [...prev.messages, message],
+      checker
     }))
   }
 
