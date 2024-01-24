@@ -44,5 +44,5 @@
     "stylelint": "^16.2.0",
     "stylelint-config-standard": "^36.0.0"
   },
-  "proxy": "creation_backend:3001/"
+  "proxy": "http://creation_backend:3001/"
 }

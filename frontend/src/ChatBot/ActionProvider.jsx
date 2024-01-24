@@ -19,12 +19,12 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
    **/
     sendMessage(message);
     }
-  
-  const updateState =(message) =>{
-    setState((prev) => ({
-      ...prev,
-      messages: [...prev.messages, message],
-    }))
+    const updateState =(message,checker = "") =>{
+      setState((prev) => ({
+        ...prev,
+        messages: [...prev.messages, message],
+        checker
+      }))
   }
 
   // Put the handleHello function in the actions object to pass to the MessageParser
