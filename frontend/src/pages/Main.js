@@ -30,6 +30,12 @@ import ActionProvider from '../ChatBot/ActionProvider'
 import config from '../ChatBot/config'
 import MessageParser from '../ChatBot/MessageParser'
 export const Ap = () => {
+  const [isChatbotVisible, setChatbotVisibility] = useState(true);
+
+  const toggleChatbotVisibility = () => {
+    setChatbotVisibility((prevVisibility) => !prevVisibility);
+  };
+  
   const initialFormData = JSON.parse(localStorage.getItem('formData')) || {
     name: '',
     email: '',
@@ -101,13 +107,19 @@ export const Ap = () => {
           </nav>
         </header>
         <div className="scrollable-div">
-            <header className="App-header">
+          <header className="App-header">
+            <button className="btn_toggle" onClick={toggleChatbotVisibility}>
+              Toggle Chatbot
+            </button>
+            {isChatbotVisible && (
               <Chatbot
-              config={config}
-              messageParser={MessageParser}
-              actionProvider={ActionProvider} />
-            </header>
-            </div>
+                config={config}
+                messageParser={MessageParser}
+                actionProvider={ActionProvider}
+              />
+            )}
+          </header>
+        </div>
         <hr></hr>
 
         <section id="about" className="about-us">
