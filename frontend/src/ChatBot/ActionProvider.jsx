@@ -13,12 +13,23 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     const message = createChatBotMessage('Что вы хотели спросить?');
     updateState(message,'start')
   }
-  const send_msg = (message) =>{
-    /**
-    @param {String} the text to send
-   **/
-    sendMessage(message);
+  const ask_mail = (message) =>{
+    const mail = createChatBotMessage('Укажите вашу почту');
+    updateState(mail,message)
+  }
+  const send_msg = (message,checker) =>{
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$/
+    if (emailRegex.test(message)) {
+      /**
+        @param {String} the text to send
+      **/
+      sendMessage(message + " задал вопрос: " + checker);
     }
+    else{
+      const message = createChatBotMessage('Проверьте почту');
+      updateState(message,'start')
+    }
+  }
   
   const updateState =(message,checker = "") =>{
     setState((prev) => ({
@@ -37,7 +48,8 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
             handleYes,
             handleNo,
             handleStartChat,
-            send_msg
+            send_msg,
+            ask_mail
           },
         });
       })}

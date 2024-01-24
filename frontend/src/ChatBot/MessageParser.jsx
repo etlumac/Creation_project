@@ -5,7 +5,10 @@ const MessageParser = ({ children, actions }) => {
   console.log(children)
   const parse = (message) => {
     if (children.props.state.checker === "start" && message.includes('')) {
-      actions.send_msg(message);
+      actions.ask_mail(message);
+    }
+    if (children.props.state.checker !== "start" && message.includes('')) {
+      actions.send_msg(message,children.props.state.checker);
     }
   };
 
