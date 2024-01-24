@@ -539,7 +539,9 @@ form textarea {
   top: 20px;
   padding-bottom: 40%;
 
-  .react-chatbot-kit-chat-bot-message {
+}
+
+.react-chatbot-kit-chat-bot-message {
     background-color:gray;
     color:white;
   }
@@ -552,7 +554,6 @@ form textarea {
     background-color:gray;
   }
 
-}
 
 .btn_setting{
   background-color:gray;
