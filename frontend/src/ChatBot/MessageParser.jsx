@@ -2,9 +2,10 @@
 import React from 'react';
 
 const MessageParser = ({ children, actions }) => {
+  console.log(children)
   const parse = (message) => {
-    if (message.includes('')) {
-      actions.handleAskHelp();
+    if (children.props.state.checker === "start" && message.includes('')) {
+      actions.send_msg(message);
     }
   };
 

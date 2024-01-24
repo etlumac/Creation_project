@@ -11,8 +11,15 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   }
   const handleStartChat = () => {
     const message = createChatBotMessage('Что вы хотели спросить?');
-    updateState(message)
+    updateState(message,'start')
   }
+  const send_msg = (message) =>{
+    /**
+    @param {String} the text to send
+   **/
+    sendMessage(message);
+    }
+  
   const updateState =(message) =>{
     setState((prev) => ({
       ...prev,
@@ -28,7 +35,8 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
           actions: {
             handleYes,
             handleNo,
-            handleStartChat
+            handleStartChat,
+            send_msg
           },
         });
       })}
