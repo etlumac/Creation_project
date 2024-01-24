@@ -27,7 +27,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint:css:fix && git add ."
+      "pre-commit": "npm run lint:css:fix && npm run lin:fix && git add ."
     }
   },
   "scripts": {
