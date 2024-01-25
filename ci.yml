@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-lint:
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Install dependencies
+      run: npm install
+
+    # Шаг для запуска ESLint.
+    - name: Run ESLint
+      run: npm run lint.
+
+    # Шаг для запуска Stylelint.
+    - name: Run Stylelint
+      run: npm run stylelint "frontend/**/*.css"
