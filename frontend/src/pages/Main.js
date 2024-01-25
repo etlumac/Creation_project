@@ -119,6 +119,7 @@ export const Ap = () => {
 
         <section id="about" className="about-us">
           <div className="text-container">
+            <h1>Я закоммитил это без ревью</h1>
             <h2>Conecting Russia and Algeria for mutual growth</h2>
             <p>
               The primary goal of the Russia-Algeria Cooperation Center is to
