@@ -19,4 +19,4 @@ jobs:
 
     # Шаг для запуска Stylelint.
     - name: Run Stylelint
-      run: npm run lint:css "frontend/**/*.css"
+      run: npm run lint:css 
