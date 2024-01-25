@@ -33,8 +33,8 @@ module.exports = {
     'react/react-in-jsx-scope': 'off'
   },
   settings: {
-    "react": {
-      "version": "18.2.0"
+    react: {
+      version: '18.2.0'
     }
   }
 }
