@@ -14,8 +14,6 @@ export default function AnswerYes (props) {
         </div>
   )
 }
-AnswerYes.PropTypes = {
-  actions: PropTypes.shape({
-    handleStartChat: PropTypes.func.isRequired
-  }).isRequired
+AnswerYes.propTypes = {
+  actions: PropTypes.func.isRequired
 }
