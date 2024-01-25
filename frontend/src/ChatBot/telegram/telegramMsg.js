@@ -1,5 +1,4 @@
 const tg = {
-  token: '6789866050:AAEe0c7DYXEX0BxckucOg0Q9cD-ojhYmiyg',
   chat_id: '-4190366568'
 }
 
