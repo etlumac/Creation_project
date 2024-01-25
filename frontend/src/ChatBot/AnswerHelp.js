@@ -13,6 +13,8 @@ export default function AnswerHelp (props) {
                 <button className="btn_setting second_btn" onClick={() => handleNo()}>No</button>
             </div>
   )
+   
+
   
 }
 AnswerHelp.PropTypes = {
