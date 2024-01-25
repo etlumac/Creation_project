@@ -1,0 +1,39 @@
+
+  
+  .App-header{
+    z-index:999;
+    .react-chatbot-kit-chat-message-container {
+        padding: 0 17.5px 0px 17.5px;
+        overflow: scroll;
+        height: 350px;
+    }
+    .react-chatbot-kit-chat-bot-message {
+        background-color:gray;
+        color:white;
+      }
+    
+      .react-chatbot-kit-chat-bot-message-arrow {
+        border-right:8px solid gray;
+      }
+    
+      .react-chatbot-kit-chat-btn-send {
+        background-color:gray;
+      }
+  }
+  
+
+  
+  
+  .btn_setting{
+    background-color:gray;
+    color:white;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    padding: .5rem 1rem;
+    margin-left: 0;
+  }
+  
+  .second_btn{
+    margin-left: 1rem;
+  }
