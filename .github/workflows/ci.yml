@@ -8,23 +8,33 @@ jobs:
   docker-build:
     runs-on: ubuntu-latest
     steps:
-    - name: build
+    - uses: actions/checkout@v3
+      name: Checkout code
+    - name: Build and run containers
       run: docker-compose up --build 
 
   lint:
+    needs: docker-build
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v3
+      name: Checkout code
+    - name: Install dependencies
+      run: npm install
     - name: Run ESLint
-      run: npm run lint.
-
+      run: npm run lint
     - name: Run Stylelint
       run: npm run lint:css 
   
   test:
+    needs: lint
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+      name: Checkout code
+    - name: Install dependencies
+      run: npm install
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run Playwright tests
