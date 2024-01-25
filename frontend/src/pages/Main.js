@@ -106,8 +106,7 @@ export const Ap = () => {
             </section>
           </nav>
         </header>
-        
-        
+
         <hr></hr>
 
         <section id="about" className="about-us">

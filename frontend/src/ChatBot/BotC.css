@@ -4,11 +4,13 @@
     z-index:999;
    
   }
+
   .App-header .react-chatbot-kit-chat-message-container {
-    padding: 0 17.5px 0px 17.5px;
+    padding: 0 17.5px;
     overflow: scroll;
     height: 350px;
   }
+
   .App-header .react-chatbot-kit-chat-bot-message {
     background-color:gray;
     color:white;
@@ -32,7 +34,7 @@
     cursor: pointer;
     padding: .5rem 1rem;
     margin-left: 0;
-  }
+  },
   
   .second_btn{
     margin-left: 1rem;
