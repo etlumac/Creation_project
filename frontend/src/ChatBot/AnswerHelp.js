@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 export default function AnswerHelp (props) {
   const handleYes = () => {
     props.actions.handleYes()
@@ -12,4 +13,11 @@ export default function AnswerHelp (props) {
                 <button className="btn_setting second_btn" onClick={() => handleNo()}>No</button>
             </div>
   )
+  
+}
+AnswerHelp.PropTypes = {
+  actions: PropTypes.shape({
+    handleYes: PropTypes.func.isRequired,
+    handleNo: PropTypes.func.isRequired,
+  }).isRequired
 }
