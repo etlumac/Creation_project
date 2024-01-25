@@ -549,3 +549,12 @@ form textarea {
 .btn_toggle:hover {
   background-color: #00000079;
 }
+
+.success-message {
+  background-color: #4caf50;
+  color: white;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
