@@ -2,25 +2,25 @@
   
   .App-header{
     z-index:999;
-    .react-chatbot-kit-chat-message-container {
-        padding: 0 17.5px 0px 17.5px;
-        overflow: scroll;
-        height: 350px;
-    }
-    .react-chatbot-kit-chat-bot-message {
-        background-color:gray;
-        color:white;
-      }
-    
-      .react-chatbot-kit-chat-bot-message-arrow {
-        border-right:8px solid gray;
-      }
-    
-      .react-chatbot-kit-chat-btn-send {
-        background-color:gray;
-      }
+   
   }
-  
+  .App-header .react-chatbot-kit-chat-message-container {
+    padding: 0 17.5px 0px 17.5px;
+    overflow: scroll;
+    height: 350px;
+  }
+  .App-header .react-chatbot-kit-chat-bot-message {
+    background-color:gray;
+    color:white;
+  }
+
+  .App-header .react-chatbot-kit-chat-bot-message-arrow {
+    border-right:8px solid gray;
+  }
+
+  .App-header .react-chatbot-kit-chat-btn-send {
+    background-color:gray;
+  }
 
   
   
