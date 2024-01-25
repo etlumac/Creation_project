@@ -218,7 +218,7 @@ export const Ap = () => {
           <section className="services">
             <div className="services-block">
               <div className="App-header" style={{ position: 'fixed', bottom: 10, right: 10, boxShadow: 'rgba(0, 0, 0, 0.3) 0px 0px 10px' }}>
-              <button className={`btn_toggle ${isChatbotVisible ? 'bot-open' : ''}`} onClick={toggleChatbotVisibility}>
+              <button className={`btn_toggle ${isChatbotVisible ? 'bot-open' : ''}`} onClick={toggleChatbotVisibility} tabIndex = "0">
               Chat
               </button>
               {isChatbotVisible && (
