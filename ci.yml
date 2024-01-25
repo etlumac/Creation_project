@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-lint:
+
+    steps:
+
+    - name: Install dependencies
+      run: npm install
+
+    # Шаг для запуска ESLint.
+    - name: Run ESLint
+      run: npm run lint.
+
+    # Шаг для запуска Stylelint.
+    - name: Run Stylelint
+      run: npm run lint:css 
+
+    - name: Check for linting errors
+      run: |
+        if npm run lint; then
+          echo "ESLint passed without any issues."
+        else
+          echo "ESLint found issues."
+          exit 1
+        fi
+        if npm run lint:css; then
+          echo "Stylelint passed without any issues."
+        else
+          echo "Stylelint found issues."
+          exit 1
+        fi
