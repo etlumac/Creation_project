@@ -7,7 +7,7 @@
 
 # testing
 /coverage
-/token.env
+.env
 
 # production
 /build
