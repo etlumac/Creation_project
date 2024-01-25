@@ -7,6 +7,7 @@ module.exports = {
     'standard',
     'plugin:react/recommended'
   ],
+
   overrides: [
     {
       env: {
@@ -30,5 +31,10 @@ module.exports = {
   ],
   rules: {
     'react/react-in-jsx-scope': 'off'
+  },
+  settings: {
+    "react": {
+      "version": "18.2.0"
+    }
   }
 }
