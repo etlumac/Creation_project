@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 export default function AnswerYes (props) {
   const handleStartChat = () => {
     props.actions.handleStartChat()
@@ -13,3 +14,9 @@ export default function AnswerYes (props) {
         </div>
   )
 }
+AnswerYes.PropTypes = {
+  actions: PropTypes.shape({
+    handleStartChat: PropTypes.func.isRequired,
+  }).isRequired
+}
+
