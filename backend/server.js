@@ -7,10 +7,11 @@ const path = require('path')
 
 const app = express()
 const PORT = process.env.PORT || 3001
+const token = process.env.TELEGRAM_API_TOKEN || "6789866050:AAEe0c7DYXEX0BxckucOg0Q9cD-ojhYmiyg"
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$/
 
 const TelegramBot = require('node-telegram-bot-api')
-const bot = new TelegramBot(process.env.TELEGRAM_API_TOKEN, { polling: true })
+const bot = new TelegramBot(token, { polling: true })
 const chatId = '-4190366568'
 
 app.use(bodyParser.json())
