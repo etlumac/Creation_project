@@ -34,6 +34,7 @@ import config from '../ChatBot/config'
 
 export const Ap = () => {
   const [isChatbotVisible, setChatbotVisibility] = useState(false)
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false)
 
   const toggleChatbotVisibility = () => {
     setChatbotVisibility((prevVisibility) => !prevVisibility)
@@ -61,6 +62,7 @@ export const Ap = () => {
 
     try {
       await axios.post('/api/submitForm', formData)
+      setShowSuccessMessage(true)
       setFormData({
         name: '',
         email: '',
@@ -68,8 +70,6 @@ export const Ap = () => {
       })
 
       localStorage.removeItem('formData')
-
-      alert('Form submitted successfully!')
     } catch (error) {
       if (
         error.response &&
@@ -82,6 +82,14 @@ export const Ap = () => {
       }
     }
   }
+  useEffect(() => {
+    if (showSuccessMessage) {
+      const timer = setTimeout(() => {
+        setShowSuccessMessage(false)
+      }, 3000)
+      return () => clearTimeout(timer)
+    }
+  }, [showSuccessMessage])
 
   const scrollToContacts = () => {
     const contactsSection = document.getElementById('contacts')
@@ -109,8 +117,7 @@ export const Ap = () => {
             </section>
           </nav>
         </header>
-        
-        
+
         <hr></hr>
 
         <section id="about" className="about-us">
@@ -222,7 +229,7 @@ export const Ap = () => {
           <section className="services">
             <div className="services-block">
               <div className="App-header" style={{ position: 'fixed', bottom: 10, right: 10, boxShadow: 'rgba(0, 0, 0, 0.3) 0px 0px 10px' }}>
-              <button className={`btn_toggle ${isChatbotVisible ? 'bot-open' : ''}`} onClick={toggleChatbotVisibility}>
+              <button className={`btn_toggle ${isChatbotVisible ? 'bot-open' : ''}`} onClick={toggleChatbotVisibility} tabIndex = "0">
               Chat
               </button>
               {isChatbotVisible && (
@@ -297,6 +304,9 @@ export const Ap = () => {
 
               <button className="black_button" type="submit">Submit</button>
             </form>
+            {showSuccessMessage && (
+              <div className="success-message">Form submitted successfully!</div>
+            )}
           </section>
           <hr></hr>
           <section>

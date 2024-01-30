@@ -1,0 +1,18 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+      name: Checkout code
+    - name: Install dependencies
+      run: npm install
+    - name: Run ESLint
+      run: npm run lint
+    - name: Run Stylelint
+      run: npm run lint:css 

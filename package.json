@@ -41,11 +41,6 @@
       "last 1 safari version"
     ]
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint:css:fix && npm run lin:fix && git add ."
-    }
-  },
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",

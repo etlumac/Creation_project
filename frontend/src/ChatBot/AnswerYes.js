@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 export default function AnswerYes (props) {
   const handleStartChat = () => {
     props.actions.handleStartChat()
@@ -12,4 +13,7 @@ export default function AnswerYes (props) {
       <button className="btn_setting second_btn" onClick={() => handleStartChat()}>Chat</button>
         </div>
   )
+}
+AnswerYes.propTypes = {
+  actions: PropTypes.func.isRequired
 }
