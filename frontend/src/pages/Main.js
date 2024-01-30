@@ -9,6 +9,10 @@ import {
   faTelegram
 } from '@fortawesome/free-brands-svg-icons'
 
+import ActionProvider from '../ChatBot/ActionProvider.jsx';
+import MessageParser from '../ChatBot/MessageParser.jsx';
+
+
 import axios from 'axios'
 
 import logo from '../Images/IMG_9533.jpg'
@@ -26,9 +30,8 @@ import six from '../Images/education-and-sciencethere-is-an-active-exchange-of-s
 import Chatbot from 'react-chatbot-kit'
 import 'react-chatbot-kit/build/main.css'
 
-import ActionProvider from '../ChatBot/ActionProvider'
 import config from '../ChatBot/config'
-import MessageParser from '../ChatBot/MessageParser'
+
 export const Ap = () => {
   const [isChatbotVisible, setChatbotVisibility] = useState(false)
 
@@ -92,7 +95,7 @@ export const Ap = () => {
       <body>
         <header>
           <nav>
-            <h1>Созидание</h1>
+            <h1>Creation</h1>
             <section className="head_options">
               <a href="#about">About Us</a>
 
