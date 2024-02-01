@@ -1,6 +1,6 @@
 import './App.css'
 import video from '../Images/production_id_3923315.mp4'
-
+import React from 'react'
 import one from '../Images/photo_2024-01-21_10-48-33.jpg'
 import two from '../Images/russia1.jpg'
 import three from '../Images/moscow.jpg'

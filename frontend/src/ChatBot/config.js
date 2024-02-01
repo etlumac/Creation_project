@@ -1,4 +1,5 @@
 import { createChatBotMessage } from 'react-chatbot-kit'
+import React from 'react'
 import AnswerYes from './AnswerYes'
 import AnswerHelp from './AnswerHelp'
 const config = {
