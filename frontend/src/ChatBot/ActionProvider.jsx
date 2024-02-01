@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import sendMessage from './telegram/telegramMsg.js'
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   const handleNo = () =>{

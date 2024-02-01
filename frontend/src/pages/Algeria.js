@@ -1,4 +1,3 @@
-import React from 'react';
 import './App.css'
 import React from 'react'
 import video from '../Images/production_id_3711794.mp4'

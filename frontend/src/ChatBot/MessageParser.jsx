@@ -1,5 +1,5 @@
 // in MessageParser.js
-import React from 'react';
+import React from 'react'
 
 const MessageParser = ({ children, actions }) => {
   console.log(children)
