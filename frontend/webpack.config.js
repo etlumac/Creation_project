@@ -3,13 +3,14 @@ const path = require('path');
 module.exports = {
     devServer: {
         compress: false,
-        host: "0.0.0.0",
-        port: 3000,
+        historyApiFallback: {
+            disableDotRule: true,
+          },
       },
       watchOptions: {
         poll: 1000,
       },
-  entry: './frontend/src/index.js',
+  entry: './src/index.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
@@ -41,7 +42,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-react'],
+            presets: ['@babel/preset-react', '@babel/preset-env'],
             cacheDirectory: false,
           },
         },
