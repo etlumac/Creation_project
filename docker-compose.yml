@@ -12,6 +12,7 @@ services:
       - ./frontend:/creation
     environment:
       - NODE_ENV=development  
+      - WATCHPACK_POLLING=true
     # stdin_open: true 
     tty: true  
   server:    
