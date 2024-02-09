@@ -6,14 +6,10 @@ services:
       - "3000:3000"
     container_name: creation_client
     volumes:
-      # - ./frontend/src:/creation/src 
-      # - ./frontend/public:/creation/public
-      # - ./frontend/package.json:/creation/package.json
       - ./frontend:/creation
     environment:
       - NODE_ENV=development  
       - WATCHPACK_POLLING=true
-    # stdin_open: true 
     tty: true  
   server:    
     build: ./backend    
